@@ -22,4 +22,10 @@ export const Global = createGlobalStyle`
   html {
     font-size: 93.75%;
   }
+
+  @media (min-width: 800px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
 `
