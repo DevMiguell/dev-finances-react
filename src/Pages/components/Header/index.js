@@ -1,6 +1,11 @@
+import { HeaderContainer } from './styles'
+import logo from '../../../assets/logo.svg'
+
 function Header() {
   return (
-    <h1>Header</h1>
+    <HeaderContainer>
+      <img src={logo} alt="Dev Finance Logo" />
+    </HeaderContainer>
   )
 }
 
