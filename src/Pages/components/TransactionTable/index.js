@@ -1,6 +1,19 @@
+import { Table } from "./styles"
+
 function TransactionTable() {
   return (
-    <h1>TransactionTable</h1>
+    <Table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Data</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </Table>
   )
 }
 
