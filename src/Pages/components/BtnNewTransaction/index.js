@@ -1,6 +1,8 @@
+import { Button } from './styles'
+
 function BtnNewTransition() {
   return (
-    <h1>BtnNewTransition</h1>
+    <Button>+ Nova Transação</Button>
   )
 }
 
