@@ -1,10 +1,7 @@
 import { Modal, ModalOverlay } from "./styles"
 
-
-
 function NewTransactionModal() {
   return (
-
     <ModalOverlay>
       <Modal>
         <div className="form">
@@ -21,7 +18,8 @@ function NewTransactionModal() {
               <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00" />
 
               <small className="help">
-                Use o sinal - (Negativo) para despesas e, (Vírgula) para casas decimais.</small>
+                Use o sinal - (Negativo) para despesas e, (Vírgula) para casas decimais.
+              </small>
             </div>
 
             <div className="input-group">
@@ -30,8 +28,8 @@ function NewTransactionModal() {
             </div>
 
             <div className="input-group actions">
-              <button className="cancel">Cancelar</button>
-              <button>Salvar</button>
+              <button type="button" className="cancel">Cancelar</button>
+              <button type="submit"> Salvar</button>
             </div>
           </form>
         </div>

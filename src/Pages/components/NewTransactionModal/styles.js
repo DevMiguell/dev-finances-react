@@ -9,13 +9,11 @@ export const ModalOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* opacity: 0;
-  visibility: hidden; */
 
   &:active {
     opacity: 1;
     visibility: visible;
-}
+  }
 `
 
 export const Modal = styled.div`
@@ -27,28 +25,28 @@ export const Modal = styled.div`
     border-radius: 0.2rem;
     padding: 0.8rem;
     width: 100%;
-}
+  }
 
-.input-group {
+  .input-group {
     margin-top: 0.8rem;
-}
 
-.input-group small {
-    opacity: 0.4;
-}
+    small {
+      opacity: 0.4;
+    }
+  }
 
-.input-group.actions {
+  .input-group.actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    margin-top: 2.5rem;
 
-.input-group.actions .button, .input-group.actions button {
-    width: 48%;
-}
+    button {
+      width: 48%;
+    }
+  }
 
-button {
-    width: 100%;
+  button {
     height: 50px;
     border: none;
     color: white;
@@ -56,29 +54,25 @@ button {
     padding: 0;
     border-radius: 0.25rem;
     cursor: pointer;
-}
+    transition: 0.3s;
 
-button:hover {
-    background-color: var(--light-green);
-    transition: 0.3ms;
-}
+    &:hover {
+      background-color: var(--light-green);
+    }
+  }
 
-.cancel {
+  .cancel {
+    height: 50px;
+    background: none;
     color: var(--red);
     border: 2px var(--red) solid;
     border-radius: 0.25rem;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 0.6;
-    background: none;
-}
+    transition: 0.3s;
 
-.cancel:hover {
-    opacity: 1;
-    transition: 0.3ms;
-    background: none;
-}
-
+    &:hover {
+      opacity: 1;
+      background: none;
+    }
+  }
 `
