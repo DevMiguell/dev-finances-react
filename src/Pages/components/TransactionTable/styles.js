@@ -5,12 +5,12 @@ export const Table = styled.table`
   border-spacing: 0 0.5rem;
   color: #969cb3;
 
-  thead tr td:first-child,  tbody tr td:first-child {
-    border-radius: 0.25rem 0 0 0.25rem;
+  thead tr th:first-child,  tbody tr td:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
   }
 
-  thead tr td:last-child,  tbody tr td:last-child {
-    border-radius: 0 0.25rem 0.25rem 0;
+  thead tr th:last-child,  tbody tr td:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
   }
 
   thead th {
@@ -23,27 +23,28 @@ export const Table = styled.table`
 
   tbody tr {
     opacity: 0.7;
-  }
+    transition: opacity 0.2s, transform 0.2s;
 
-  tbody tr:hover {
-    opacity: 1;
-  }
+    &:hover {
+      opacity: 1;
+      transform: scale(1.02);
+    }
 
-  tbody td {
-    background: white;
-    padding: 1rem 2rem;
-  }
+    td {
+      background: white;
+      padding: 1rem 2rem;
+    }
 
-  td.description {
-    color: var(--dark-blue);
-  }
+    td.description {
+      color: var(--dark-blue);
+    }
 
-  td.income {
-    color: #12a454;
-  }
+    td.income {
+      color: #12a454;
+    }
 
-  td.expense {
-    color: #e92929;
+    td.expense {
+      color: #e92929;
+    }
   }
-
 `
