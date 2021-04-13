@@ -1,6 +1,6 @@
 import { Modal, ModalOverlay } from "./styles"
 
-function NewTransactionModal() {
+function NewTransactionModal({ closeModal }) {
   return (
     <ModalOverlay>
       <Modal>
@@ -28,7 +28,7 @@ function NewTransactionModal() {
             </div>
 
             <div className="input-group actions">
-              <button type="button" className="cancel">Cancelar</button>
+              <button type="button" className="cancel" onClick={closeModal}>Cancelar</button>
               <button type="submit"> Salvar</button>
             </div>
           </form>

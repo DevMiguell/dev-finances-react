@@ -1,8 +1,8 @@
 import { Button } from './styles'
 
-function BtnNewTransition() {
+function BtnNewTransition({ openModal }) {
   return (
-    <Button>+ Nova Transação</Button>
+    <Button onClick={openModal}>+ Nova Transação</Button>
   )
 }
 

@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Header from '../components/Header'
 import { ContainerGlobal } from './styles'
 import Summary from '../components/Summary'
@@ -6,17 +8,21 @@ import TransactionTable from '../components/TransactionTable'
 import NewTransactionModal from '../components/NewTransactionModal'
 
 function Home() {
+  const [modalNewTransition, setModalNewTransition] = useState(false)
+
+  const toggleModal = () => setModalNewTransition(!modalNewTransition)
+
   return (
     <>
       <Header />
 
       <ContainerGlobal>
         <Summary />
-        <BtnNewTransition />
+        <BtnNewTransition openModal={toggleModal} />
         <TransactionTable />
       </ContainerGlobal>
 
-      <NewTransactionModal />
+      {modalNewTransition && <NewTransactionModal closeModal={toggleModal} />}
     </>
   )
 }
