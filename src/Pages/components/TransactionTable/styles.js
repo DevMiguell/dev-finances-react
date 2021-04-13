@@ -46,5 +46,20 @@ export const Table = styled.table`
     td.expense {
       color: #e92929;
     }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      img {
+        opacity: 0.7;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 `

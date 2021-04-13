@@ -1,9 +1,9 @@
 import { formatCurrency } from '../../../util'
 
 import { Table } from './styles'
-import minus from '../../../assets/minus.svg'
+import trash from '../../../assets/trash.svg'
 
-function TransactionTable({ arrayTransactions }) {
+function TransactionTable({ arrayTransactions, removeTransaction }) {
   return (
     <Table>
       <thead>
@@ -22,7 +22,7 @@ function TransactionTable({ arrayTransactions }) {
             <td className={transaction.type}>{formatCurrency(transaction.amount)}</td>
             <td className="date">{transaction.date}</td>
             <td>
-              <img src={minus} alt="Remover transação" />
+              <button onClick={() => removeTransaction(transaction.id)}><img src={trash} alt="Remover transação" /></button>
             </td>
           </tr>
         ))}

@@ -63,7 +63,7 @@ function NewTransactionModal({ closeModal, addTransaction }) {
 
             <div className="input-group actions">
               <button type="button" className="cancel" onClick={closeModal}>Cancelar</button>
-              <button type="submit"> Salvar</button>
+              <button type="submit">Salvar</button>
             </div>
           </form>
         </div>

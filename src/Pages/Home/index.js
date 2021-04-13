@@ -20,6 +20,11 @@ function Home() {
     setArrayTransactions([...arrayTransactions, objTransaction])
   }
 
+  const removeTransaction = id => {
+    const removedATransactions = [...arrayTransactions].filter(transaction => transaction.id !== id);
+    setArrayTransactions(removedATransactions)
+  }
+
   return (
     <>
       <Header />
@@ -27,7 +32,7 @@ function Home() {
       <ContainerGlobal>
         <Summary />
         <BtnNewTransaction openModal={toggleModal} />
-        <TransactionTable arrayTransactions={arrayTransactions} />
+        <TransactionTable arrayTransactions={arrayTransactions} removeTransaction={removeTransaction} />
       </ContainerGlobal>
 
       {modalNewTransaction && <NewTransactionModal closeModal={toggleModal} addTransaction={addTransaction} />}
