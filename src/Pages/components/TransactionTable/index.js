@@ -22,7 +22,9 @@ function TransactionTable({ arrayTransactions, removeTransaction }) {
             <td className={transaction.type}>{formatCurrency(transaction.amount)}</td>
             <td className="date">{transaction.date}</td>
             <td>
-              <button onClick={() => removeTransaction(transaction.id)}><img src={trash} alt="Remover transação" /></button>
+              <button onClick={() => removeTransaction(transaction.id)}>
+                <img src={trash} alt="Remover transação" />
+              </button>
             </td>
           </tr>
         ))}

@@ -21,11 +21,11 @@ function Home() {
   }
 
   const removeTransaction = id => {
-    const removedATransactions = [...arrayTransactions].filter(transaction => transaction.id !== id);
+    const removedATransactions = arrayTransactions.filter(transaction => transaction.id !== id)
     setArrayTransactions(removedATransactions)
   }
 
-  const totalSoma = [...arrayTransactions].reduce(function (acumulador, objetoAtual){
+  const totalSoma = [...arrayTransactions].reduce(function (acumulador, objetoAtual) {
     return acumulador + objetoAtual.amount
   }, 0)
 

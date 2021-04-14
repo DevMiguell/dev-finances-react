@@ -43,12 +43,12 @@ function NewTransactionModal({ closeModal, addTransaction }) {
 
           <form action="" onSubmit={handleSubmit}>
             <div className="input-group">
-              <label className="sr-only" for="description">Descrição</label>
+              <label className="sr-only" htmlFor="description">Descrição</label>
               <input type="text" value={description} onChange={handleDescription} id="description" name="description" placeholder="Descrição" />
             </div>
 
             <div className="input-group">
-              <label className="sr-only" for="description">Valor</label>
+              <label className="sr-only" htmlFor="description">Valor</label>
               <input type="number" value={amount} onChange={handleAmount} step="0.01" id="amount" name="amount" placeholder="0,00" />
 
               <small className="help">
