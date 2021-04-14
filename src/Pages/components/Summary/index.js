@@ -3,8 +3,13 @@ import { Container } from './styles'
 import income from '../../../assets/income.svg'
 import expense from '../../../assets/expense.svg'
 import total from '../../../assets/total.svg'
+import { formatCurrency } from '../../../util'
 
-function Summary() {
+function Summary(totalSoma) {
+
+  let formatTotal = Object.values(totalSoma)
+  let formatAmoeda = formatCurrency(formatTotal)
+
   return (
     <Container>
       <div>
@@ -31,7 +36,7 @@ function Summary() {
           <img src={total} alt="Imagem Total" />
         </h3>
 
-        <p>R$ 0,00</p>
+        <p>{formatAmoeda}</p>
       </div>
     </Container>
   )
