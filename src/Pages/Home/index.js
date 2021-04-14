@@ -25,16 +25,12 @@ function Home() {
     setArrayTransactions(removedATransactions)
   }
 
-  const totalSoma = [...arrayTransactions].reduce(function (acumulador, objetoAtual) {
-    return acumulador + objetoAtual.amount
-  }, 0)
-
   return (
     <>
       <Header />
 
       <ContainerGlobal>
-        <Summary totalSoma={totalSoma} />
+        <Summary arrayTransactions={arrayTransactions} />
         <BtnNewTransaction openModal={toggleModal} />
         <TransactionTable arrayTransactions={arrayTransactions} removeTransaction={removeTransaction} />
       </ContainerGlobal>

@@ -1,42 +1,54 @@
-import { Container } from './styles'
-
-import income from '../../../assets/income.svg'
-import expense from '../../../assets/expense.svg'
-import total from '../../../assets/total.svg'
 import { formatCurrency } from '../../../util'
 
-function Summary(totalSoma) {
+import { Container } from './styles'
 
-  let formatTotal = Object.values(totalSoma)
-  let formatAmoeda = formatCurrency(formatTotal)
+import incomeSvg from '../../../assets/income.svg'
+import expenseSvg from '../../../assets/expense.svg'
+import totalSvg from '../../../assets/total.svg'
+
+function Summary({ arrayTransactions }) {
+  let income = 0
+  let expense = 0
+
+  arrayTransactions.forEach(transaction => {
+    if (transaction.amount > 0) {
+      income += transaction.amount
+    } else {
+      expense += transaction.amount
+    }
+  })
+
+  const incomeFormatted = formatCurrency(income)
+  const expenseFormatted = formatCurrency(expense)
+  const totalFormatted = formatCurrency(income + expense)
 
   return (
     <Container>
       <div>
         <h3>
           <span>Entradas</span>
-          <img src={income} alt="Imagem de Entradas" />
+          <img src={incomeSvg} alt="Imagem de Entradas" />
         </h3>
 
-        <p>R$ 0,00</p>
+        <p>{incomeFormatted}</p>
       </div>
 
       <div>
         <h3>
           <span>Saidas</span>
-          <img src={expense} alt="Imagem Saida" />
+          <img src={expenseSvg} alt="Imagem Saida" />
         </h3>
 
-        <p>R$ 0,00</p>
+        <p>{expenseFormatted}</p>
       </div>
 
       <div className="total">
         <h3>
           <span>Total</span>
-          <img src={total} alt="Imagem Total" />
+          <img src={totalSvg} alt="Imagem Total" />
         </h3>
 
-        <p>{formatAmoeda}</p>
+        <p>{totalFormatted}</p>
       </div>
     </Container>
   )
