@@ -44,12 +44,28 @@ function NewTransactionModal({ closeModal, addTransaction }) {
           <form action="" onSubmit={handleSubmit}>
             <div className="input-group">
               <label className="sr-only" htmlFor="description">Descrição</label>
-              <input type="text" value={description} onChange={handleDescription} id="description" name="description" placeholder="Descrição" />
+              <input
+                type="text"
+                value={description}
+                onChange={handleDescription}
+                id="description"
+                name="description"
+                placeholder="Descrição"
+                autoFocus
+              />
             </div>
 
             <div className="input-group">
-              <label className="sr-only" htmlFor="description">Valor</label>
-              <input type="number" value={amount} onChange={handleAmount} step="0.01" id="amount" name="amount" placeholder="0,00" />
+              <label className="sr-only" htmlFor="amount">Valor</label>
+              <input
+                type="number"
+                value={amount}
+                onChange={handleAmount}
+                step="0.01"
+                id="amount"
+                name="amount"
+                placeholder="0,00"
+              />
 
               <small className="help">
                 Use o sinal - (Negativo) para despesas e, (Vírgula) para casas decimais.
@@ -57,8 +73,14 @@ function NewTransactionModal({ closeModal, addTransaction }) {
             </div>
 
             <div className="input-group">
-              <label>Descrição</label>
-              <input type="date" value={date} onChange={handleDate} id="date" name="date" />
+              <label className="sr-only" htmlFor="date">Descrição</label>
+              <input
+                type="date"
+                value={date}
+                onChange={handleDate}
+                id="date"
+                name="date"
+              />
             </div>
 
             <div className="input-group actions">
